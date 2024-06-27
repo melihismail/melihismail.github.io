@@ -1,20 +1,24 @@
 const myVideo = document.getElementById("video1");
 
 
-document.getElementById("right-choice").addEventListener("click", removeSub);
-document.getElementById("left-choice").addEventListener("click", addSub);
+document.getElementById("subtitle-toggle").addEventListener("click", toggleSub);
 myVideo.addEventListener("click", togglePause);
 myVideo.addEventListener("dblclick", toggleFullScreen);
+const mainSubtitle = document.getElementById("main-subtitle");
+mainSubtitle.style.display = "none";
 
 
-
-function removeSub() {
-    document.getElementById("main-subtitle").style.display = "none";
+function toggleSub() {
+    
+if (mainSubtitle.style.display === "none") {
+    mainSubtitle.style.display = "block";
+}
+else{
+    mainSubtitle.style.display = "none";
+    console.log("deneme")
+}
 }
 
-function addSub() {
-    document.getElementById("main-subtitle").style.display = "block";
-}
 
 
 

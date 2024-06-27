@@ -13,36 +13,28 @@ margin-bottom: 2%;
 display: none;
 }
 
-.video-choice-button-1 {
-padding: 0.5rem 2rem;
-background-color: rgba(255, 255, 255, 0.7);
-font-size: 40px;
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-border-radius: 5%;
-margin-right: 1rem;
-}
 
-.video-choice-button-2 {
-    padding: 0.5rem 2rem;
-    background-color: rgba(255, 255, 255, 0.7);
+
+.subtitle-on-off {
+    padding: 0.5rem 0.5rem;
+    background-color: rgba(255, 255, 255, 0.221);
     font-size: 40px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     border-radius: 5%;
     margin-right: 1rem;
-  
+  position: relative;
     }
 
 .inside-video {
 position: absolute;
 display: flex;
 flex-direction: column;
-justify-content: space-evenly;
+justify-content:left;
 margin-bottom: 1rem;
 }
 
 .flex-center {
     display: flex;
-    
     justify-content: center;
 }
 
