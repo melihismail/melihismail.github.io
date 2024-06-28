@@ -46,7 +46,7 @@ const startContainer = document.getElementById("start-game-cointainer")
 mainSubtitle.style.display = "none";
 
 // Array of video objects with name and subtitle properties
-// hey // hey
+// hey // heysasdasd
 
 // Variable to keep track of the current video index
 let currentVideoIndex  = 0;
