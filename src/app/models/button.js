@@ -116,9 +116,6 @@ function togglePause() {
 }
 
 // Function to toggle full screen mode for the video
-function toggleFullScreen() {
-    myVideo.requestFullscreen(); // Request full screen mode
-}
 
 // Event listeners
 myVideo.addEventListener("click", togglePause); // Toggle play/pause on single click
