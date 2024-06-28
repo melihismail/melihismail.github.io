@@ -1,0 +1,48 @@
+.header-style {
+  background: linear-gradient(135deg, #4286f4, #373B44); /* Darker gradient background */
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-logo {
+  margin: 0;
+  font-size: 36px; /* Larger font size */
+  text-align: center;
+  font-family: 'Arial Black', sans-serif;
+  letter-spacing: 2px;
+}
+
+nav {
+  text-align: center;
+}
+
+.nav-button {
+  background-color: #FF4500; /* Darker coral color */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 0 5px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button:hover {
+  background-color: #CC3700; /* Even darker coral on hover */
+  transform: translateY(-2px);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

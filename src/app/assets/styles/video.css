@@ -1,0 +1,77 @@
+.video-subtitle {
+    background-color: rgba(0, 0, 0, 0.27);
+    color: aliceblue;
+    font-size: 32px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 1rem;
+    z-index: 100;
+    margin-bottom: 2%;
+    display: none;
+  }
+  
+  .subtitle-on-off {
+    padding: 0.5rem 0.5rem;
+    background-color: rgba(255, 255, 255, 0.221);
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 5%;
+    margin-right: 1rem;
+    transition: 300ms;
+    position: relative;
+  }
+  
+  .subtitle-on-off:hover {
+    background-color: rgba(159, 249, 250, 0.616);
+    border-radius: 16px;
+    transition: 300ms;
+  }
+  
+  .inside-video {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-bottom: 1rem;
+  }
+  
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 60px;
+  }
+  
+  #video1 {
+    border: 0.5rem;
+    border-style: solid;
+  }
+  
+  @media (max-width: 767px) {
+    .video-subtitle {
+      font-size: 24px;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+    }
+  
+    .subtitle-on-off {
+      font-size: 30px;
+      padding: 0.3rem 0.3rem;
+      border-radius: 10%;
+    }
+  
+    .inside-video {
+      margin-bottom: 0.5rem;
+    }
+  
+    .flex-center {
+      padding-bottom: 30px;
+    }
+  
+    video {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
