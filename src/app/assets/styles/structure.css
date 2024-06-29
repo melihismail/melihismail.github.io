@@ -72,8 +72,10 @@ body {
 
 #controllers {
   display: flex;
-  justify-content: center;
+  justify-content:space-between;
   padding: 1rem;
+  margin-left: 25%;
+  margin-right: 25%;
 }
 
 .text-padding {

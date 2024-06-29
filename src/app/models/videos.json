@@ -3,24 +3,28 @@
         "name": "thedanger.mp4",
         "sub": "I am not in danger. I am the danger.",
         "grammar": "in (_____) devamında gelen kelimeye -de / -da anlamı katar",
-        "vocab": "danger: tehlike \nSkyler: Özel isim"
+        "vocab": "danger: tehlike \nSkyler: Özel isim",
+        "grammar-filter": ["preposition"]
     },
     {
         "name": "valo.mp4",
         "sub": "kill me",
         "grammar": "Burada gramer yok. bam bam bam",
-        "vocab": "Buradaki her kelimeyi biliyorsun"
+        "vocab": "Buradaki her kelimeyi biliyorsun",
+        "grammar-filter": ["preposition", "will"]
     },
     {
         "name": "avatar.mp4",
         "sub": "Please, listen to me. We don't have to fight!",
         "grammar": "'have to + (fiil)' cümleye zorunluluk anlamı katar. \n\nANCAK aynı kuralın olumsuzu 'yapmasan da olur/yapmak zorunda değilsin' anlamı katıyor",
-        "vocab": "listen: dinlemek \nfight: savaşmak \nwe: biz"
+        "vocab": "listen: dinlemek \nfight: savaşmak \nwe: biz",
+        "grammar-filter": ["negative-have-to"]
     },
     {
         "name": "house.mkv",
         "sub": "You don't have to hide behind a mask",
         "grammar": "'have to + (fiil)' cümleye zorunluluk anlamı katar. \n\nANCAK aynı kuralın olumsuzu 'yapmasan da olur/yapmak zorunda değilsin' anlamı katıyor \n\n behind (_____) devamında gelen kelimeye 'arkasında' anlamı katar",
-        "vocab": "Hide: Saklamak, saklanmak \nMask: Maske"
+        "vocab": "Hide: Saklamak, saklanmak \nMask: Maske",
+        "grammar-filter": ["negative-have-to","preposition"]
     }
 ]

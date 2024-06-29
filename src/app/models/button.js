@@ -23,30 +23,27 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
-const myVideo = document.getElementById("video-shown");
+// containers
+const gameContainer = document.getElementById("the-game")
+const startContainer = document.getElementById("start-game-cointainer")
 const myVideoContainer = document.querySelector(".video-container")
-const mainSubtitle = document.getElementById("main-subtitle");
-
-const subToggle = document.getElementById("subtitle-toggle");
-
-const nextBtn = document.getElementById("nextBtn");
-const previousBtn = document.getElementById("previousBtn");
 const changeGrammarContainer = document.getElementById("change-grammar");
 const changeInfoContainer = document.getElementById("change-info");
-
 const infoContainer = document.querySelector(".info-container")
 const grammarContainer = document.querySelector(".grammar-container")
 
+//cons for buttons
+const subToggle = document.getElementById("subtitle-toggle");
+const nextBtn = document.getElementById("nextBtn");
+const previousBtn = document.getElementById("previousBtn");
 const startBtn = document.getElementById("start-game-btn")
-const gameContainer = document.getElementById("the-game")
-const startContainer = document.getElementById("start-game-cointainer")
+
+//Others
+const mainSubtitle = document.getElementById("main-subtitle");
+const myVideo = document.getElementById("video-shown");
 
 // Initially hide the subtitle element
 mainSubtitle.style.display = "none";
-
-// Array of video objects with name and subtitle properties
-// hey // heysasdasd
 
 // Variable to keep track of the current video index
 let currentVideoIndex  = 0;
@@ -119,7 +116,6 @@ function togglePause() {
 
 // Event listeners
 myVideo.addEventListener("click", togglePause); // Toggle play/pause on single click
-myVideo.addEventListener("dblclick", toggleFullScreen); // Toggle full screen on double click
 subToggle.addEventListener("click", toggleSub); // Toggle subtitle visibility on click
 nextBtn.addEventListener("click", nextVideoBtn); // Switch to next video on click
 previousBtn.addEventListener("click", previousVideoBtn); // Switch to next video on click
@@ -131,6 +127,7 @@ function videoCounter(){
 
 if (videoCounterIndex == 0){
     highlightAll(infoContainer);
+    highlightAll(grammarContainer);
     highlightAll(grammarContainer);
     videoCounterIndex++;
     
@@ -148,19 +145,30 @@ if (videoCounterIndex == 0){
 
 
 // it highlights the container twice.
-function highlightAll(element) {
-    element.style.boxShadow = "0px 0px 20px 6px rgb(241, 196, 15)";
-    element.style.transition = "box-shadow 700ms ease-in-out";
+function highlightAll(element, color = "rgb(241, 196, 15)", duration = 700, pulses = 3) {
+    const interval = duration * 2;
 
-    setTimeout(() => {
-        element.style.boxShadow = "0px 0px 0px 0px rgb(241, 196, 15)";
-    }, 700);
+    for (let i = 0; i < pulses; i++) {
+        setTimeout(() => {
+            element.style.boxShadow = `0px 0px 20px 6px ${color}`;
+        }, i * interval);
 
-    setTimeout(() => {
-        element.style.boxShadow = "0px 0px 20px 6px rgb(241, 196, 15)";
-    }, 1400);
+        setTimeout(() => {
+            element.style.boxShadow = "0px 0px 0px 0px";
+        }, i * interval + duration);
+    }
 
-    setTimeout(() => {
-        element.style.boxShadow = "0px 0px 0px 0px rgb(241, 196, 15)";
-    }, 2100);
+    element.style.transition = `box-shadow ${duration}ms ease-in-out`;
 }
+
+
+
+//filtrelemek için bunu kullanacağım ama nasıl yaacağım bilmiyorum. hayırlısı
+function filterVideos(video) {
+    return video['grammar-filter'].includes('preposition');
+}
+
+var filteredVideos = videos.filter(filterVideos);
+
+console.log(videos[0])
+console.log(filteredVideos)
