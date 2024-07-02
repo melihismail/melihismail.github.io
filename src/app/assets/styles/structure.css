@@ -65,9 +65,16 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.primary-button:hover {
+.primary-button:not(:disabled):hover {
   background-color: #CC3700; /* Even darker coral on hover */
   transform: translateY(-2px);
+}
+
+.primary-button:disabled {
+  background-color: #cccccc; /* Change background color */
+  color: #666666;           /* Change text color */
+  cursor: not-allowed;      /* Change cursor to indicate it's disabled */
+  opacity: 0.6; 
 }
 
 #controllers {

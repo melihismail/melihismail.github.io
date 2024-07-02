@@ -4,7 +4,7 @@
         "sub": "I am not in danger. I am the danger.",
         "grammar": "in (_____) devamında gelen kelimeye -de / -da anlamı katar",
         "vocab": "danger: tehlike \nSkyler: Özel isim",
-        "grammar-filter": ["preposition"]
+        "grammar-filter": ["preposition", "a"]
     },
     {
         "name": "valo.mp4",
