@@ -172,3 +172,19 @@ body {
   }
 }
 
+@media (max-width: 1366px) {
+  .video-container, .grammar-container, .info-container {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .text-padding {
+    font-size: 14px;
+  }
+
+  .primary-button {
+    padding: 8px 16px;
+    font-size: 18px;
+  }
+}
