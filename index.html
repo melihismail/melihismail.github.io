@@ -6,6 +6,7 @@
     <title>Melih ile İngilizce</title>
     <link rel="stylesheet" href="/src/app/assets/styles/structure.css">
     <link rel="stylesheet" href="/src/app/assets/styles/header.css">
+    <link rel="stylesheet" href="src/app/assets/styles/checkbox.css">
   
 
   
@@ -16,13 +17,41 @@
       <div class="container">
         <h1 class="header-logo">Melih Teacher</h1>
         <nav id="header">
-          <button class="nav-button">Konu</button>
+          <button class="nav-button topic-button">Konu</button>
+          <div class="dropdown-content">
+            <a href="#option1">Option 1</a>
+            <a href="#option2">Option 2</a>
+            <a href="#option3">Option 3</a>
+        </div>
           <button class="nav-button">Seviye</button>
           <button class="nav-button">Puan</button>
         </nav>
       </div>
     </header>
     <main class="main-content">
+    
+      <label class="cyberpunk-checkbox-label">
+        <input type="checkbox" class="cyberpunk-checkbox grammar-checkbox" name="Prepositions" value="preposition">
+        Prepositions
+    </label>
+    
+    <label class="cyberpunk-checkbox-label">
+        <input type="checkbox" class="cyberpunk-checkbox grammar-checkbox" name="Can" value="can">
+        Can
+    </label>
+    
+    <label class="cyberpunk-checkbox-label">
+        <input type="checkbox" class="cyberpunk-checkbox grammar-checkbox" name="Want" value="want">
+        Want
+    </label>
+    
+    <label class="cyberpunk-checkbox-label">
+        <input type="checkbox" class="cyberpunk-checkbox grammar-checkbox" name="don't have to" value="don't have to">
+        Don't have to
+    </label>
+    
+  
+      <button id="filter-button" class="primary-button">Filter</button>
       <div class="start-cointainer" id="start-game-container">
       
         <button class="primary-button" id="start-game-btn"> Başla </button>

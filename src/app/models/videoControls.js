@@ -6,10 +6,13 @@ import { counterReset } from './button.js';
 
 
 export function startGame(videos, currentVideoIndex) {
+    
     document.getElementById("start-game-btn").remove();
     document.getElementById("start-game-container").remove();
     document.getElementById("the-game").style.display = "";
     myVideo.setAttribute("src", "/src/app/assets/videos/" + videos[currentVideoIndex].name);
+    showVideo(videos, currentVideoIndex); // Initialize the display with the first video
+    
 }
 
 export function showVideo(videos, currentVideoIndex) {

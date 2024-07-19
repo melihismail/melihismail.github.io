@@ -188,3 +188,19 @@ body {
     font-size: 18px;
   }
 }
+
+
+/* Hide the default checkbox */
+.container input {
+  display: none;
+}
+
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+

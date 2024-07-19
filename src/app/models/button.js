@@ -1,25 +1,35 @@
-import { subToggle, nextBtn, previousBtn, startBtn, myVideo, infoContainer, grammarContainer, mainSubtitle } from './constants.js';
+import { filterBtn, subToggle, nextBtn, previousBtn, startBtn, myVideo, infoContainer, grammarContainer, mainSubtitle } from './constants.js';
 import { fetchVideoData } from './fetchData.js';
 import { highlightAll, toggleSub } from './uiControl.js';
 import { startGame, nextVideo, previousVideo, showVideo, togglePause } from './videoControls.js';
 
+let videoData = []; //fetched videos, these don't change
+let videos = []; //these videos are changed through filtering
+let checkBoxArray = []; //values of the checkboxes that I use for filtering
 
-let videos = [];
+
 let currentVideoIndex = 0;
-nextBtn.disabled = true;
+nextBtn.disabled = false;
 previousBtn.disabled = true;
 
-document.addEventListener('DOMContentLoaded', async function() {
+
+
+async function getVideo(){ // gets and resets the videos.
+    
     const fetchedVideos = await fetchVideoData();
     if (fetchedVideos) {
         videos = fetchedVideos;
-        showVideo(videos, currentVideoIndex); // Initialize the display with the first video
+        videoData = fetchedVideos;
+        console.log("çalış")
     }
-});
+}
+getVideo();
+
 
 // Event listeners
 myVideo.addEventListener("click", togglePause);
 subToggle.addEventListener("click", toggleSub);
+filterBtn.addEventListener("click", filterAll)
 nextBtn.addEventListener("click", () => {
     currentVideoIndex = nextVideo(videos, currentVideoIndex);
 });
@@ -58,11 +68,37 @@ let videoCounterIndex = 0;
 export function counterReset() { 
     videoCounterIndex = 0;
     mainSubtitle.style.display = "none";
-    nextBtn.disabled = true
+    
     previousBtn.disabled = false;
 }
 
 myVideo.addEventListener("ended", videoCounter)
 
+
+
+// multi-select function will be added
+// runs when you click the filter button
+// Filters everything and pushes everything into videos array so the player can show them on site.
+
+
+function filterAll() {
+  videos = videoData;
+  newFilter();
+  videos = videoData.filter(video =>
+    checkBoxArray.every(value => video.grammarFilter.includes(value))
+  );
+  showVideo(videos, currentVideoIndex); // also shows the video when you click the button
+}
+
+// puts everything in checkBoxArray
+function newFilter() {
+  checkBoxArray = [];
+  const checkBoxes = document.querySelectorAll(".grammar-checkbox");
+  checkBoxes.forEach(checkbox => {
+    if (checkbox.checked) {
+      checkBoxArray.push(checkbox.value);
+    }
+  });
+}
 
 

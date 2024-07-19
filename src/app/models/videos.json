@@ -4,31 +4,38 @@
         "sub": "I am not in danger. I am the danger.",
         "grammar": "in (_____) devamında gelen kelimeye -de / -da anlamı katar",
         "vocab": "danger: tehlike \nSkyler: Özel isim",
-        "grammar-filter": ["preposition", "a"],
-        "media": "Breaking bad"
+        "grammarFilter": "preposition, can",
+        "levelFilter": "beginner",
+        "mediaFilter": "Breaking bad"
+        
+        
     },
     {
         "name": "valo.mp4",
         "sub": "kill me",
         "grammar": "Burada gramer yok. bam bam bam",
         "vocab": "Buradaki her kelimeyi biliyorsun",
-        "grammar-filter": ["preposition", "will"],
-        "media": "Breaking bad"
+        "grammarFilter": "preposition, can, want to",
+        "levelFilter": "beginner",
+        "mediaFilter": "valo"
     },
     {
         "name": "avatar.mp4",
         "sub": "Please, listen to me. We don't have to fight!",
         "grammar": "'have to + (fiil)' cümleye zorunluluk anlamı katar. \n\nANCAK aynı kuralın olumsuzu 'yapmasan da olur/yapmak zorunda değilsin' anlamı katıyor",
-        "vocab": "listen: dinlemek \nfight: savaşmak \nwe: biz",
-        "grammar-filter": ["negative-have-to"],
-        "media": "Avatar the last airbender"
+        "vocab": "listen: dinlemek \nfight: dövüşmek / savaşmak  \nwe: biz",
+        "grammarFilter": "don't have to, can",
+        "levelFilter": "beginner",
+        "mediaFilter": "avatar"
     },
     {
         "name": "house.mkv",
         "sub": "You don't have to hide behind a mask",
         "grammar": "'have to + (fiil)' cümleye zorunluluk anlamı katar. \n\nANCAK aynı kuralın olumsuzu 'yapmasan da olur/yapmak zorunda değilsin' anlamı katıyor \n\n behind (_____) devamında gelen kelimeye 'arkasında' anlamı katar",
         "vocab": "Hide: Saklamak, saklanmak \nMask: Maske",
-        "grammar-filter": ["negative-have-to","preposition"],
-        "media": "Mouse MD"
+        "grammarFilter": "don't have to, want",
+        "levelFilter": "advanced",
+        "mediaFilter": "house"
+
     }
 ]
