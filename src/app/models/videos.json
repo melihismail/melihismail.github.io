@@ -37,5 +37,16 @@
         "levelFilter": "advanced",
         "mediaFilter": "house"
 
+    },
+
+    {
+        "name": "example.mkv",
+        "sub": "You don't have to hide behind a mask",
+        "grammar-info": "'have to + (fiil)' cümleye zorunluluk anlamı katar. \n\nANCAK aynı kuralın olumsuzu 'yapmasan da olur/yapmak zorunda değilsin' anlamı katıyor \n\n behind (_____) devamında gelen kelimeye 'arkasında' anlamı katar",
+        "vocab": "Hide: Saklamak, saklanmak \nMask: Maske",
+        "grammar": ["don't have to", "want", "mask"],
+        "level": "advanced",
+        "media": "house"
+
     }
 ]
