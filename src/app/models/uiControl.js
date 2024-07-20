@@ -1,5 +1,5 @@
 // uiControl.js
-import { mainSubtitle } from './constants.js';
+import { mainSubtitle, filterMenu } from './constants.js';
 
 export function toggleSub() {
     if (mainSubtitle.style.display === "none") {
@@ -26,3 +26,10 @@ export function highlightAll(element, color = "rgb(241, 196, 15)", duration = 70
 }
 
 
+export function toggleFilter() {
+    if (filterMenu.style.display === "none") {
+        filterMenu.style.display = "block";
+    } else {
+        filterMenu.style.display = "none";
+    }
+}

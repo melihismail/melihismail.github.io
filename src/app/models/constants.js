@@ -16,4 +16,6 @@ export const startBtn = document.getElementById("start-game-btn");
 export const mainSubtitle = document.getElementById("main-subtitle");
 export const myVideo = document.getElementById("video-shown");
 export const filterBtn = document.getElementById("filter-button");
+export const topicBtn = document.getElementById("topic-button")
+export const filterMenu = document.getElementById("filter-menu")
 

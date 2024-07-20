@@ -1,7 +1,7 @@
-import { filterBtn, subToggle, nextBtn, previousBtn, startBtn, myVideo, infoContainer, grammarContainer, mainSubtitle } from './constants.js';
+import { filterBtn, subToggle, nextBtn, previousBtn, startBtn, myVideo, infoContainer, grammarContainer, mainSubtitle, topicBtn, filterMenu } from './constants.js';
 import { fetchVideoData } from './fetchData.js';
-import { highlightAll, toggleSub } from './uiControl.js';
-import { startGame, nextVideo, previousVideo, showVideo, togglePause } from './videoControls.js';
+import { highlightAll, toggleSub, toggleFilter } from './uiControl.js';
+import { startGame, nextVideo, previousVideo, showVideo, togglePause  } from './videoControls.js';
 
 let videoData = []; //fetched videos, these don't change
 let videos = []; //these videos are changed through filtering
@@ -27,6 +27,7 @@ getVideo();
 
 
 // Event listeners
+topicBtn.addEventListener("click", toggleFilter)
 myVideo.addEventListener("click", togglePause);
 subToggle.addEventListener("click", toggleSub);
 filterBtn.addEventListener("click", filterAll)
@@ -39,6 +40,7 @@ previousBtn.addEventListener("click", () => {
 startBtn.addEventListener("click", () => {
     startGame(videos, currentVideoIndex);
 });
+
 
 
 let videoCounterIndex = 0;
@@ -100,3 +102,4 @@ function newFilter() {
     }
   });
 }
+

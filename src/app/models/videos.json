@@ -33,7 +33,7 @@
         "sub": "You don't have to hide behind a mask",
         "grammar": "'have to + (fiil)' cümleye zorunluluk anlamı katar. \n\nANCAK aynı kuralın olumsuzu 'yapmasan da olur/yapmak zorunda değilsin' anlamı katıyor \n\n behind (_____) devamında gelen kelimeye 'arkasında' anlamı katar",
         "vocab": "Hide: Saklamak, saklanmak \nMask: Maske",
-        "grammarFilter": "don't have to, want",
+        "grammarFilter": "don't have to, want, mask",
         "levelFilter": "advanced",
         "mediaFilter": "house"
 
