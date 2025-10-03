@@ -6,7 +6,9 @@
         "vocab": "danger: tehlike \nSkyler: Özel isim",
         "grammarFilter": "preposition, can",
         "levelFilter": "beginner",
-        "mediaFilter": "Breaking bad"
+        "mediaFilter": "Breaking bad",
+        "optionTrue": "I am dangerous",
+        "optionFalse": "I am in danger"
         
         
     },
@@ -17,7 +19,9 @@
         "vocab": "Buradaki her kelimeyi biliyorsun",
         "grammarFilter": "preposition, can, want to",
         "levelFilter": "beginner",
-        "mediaFilter": "valo"
+        "mediaFilter": "valo",
+        "optionTrue": "Valo çok sevmem zaten",
+        "optionFalse": "ama arada oynarım"
     },
     {
         "name": "avatar.mp4",
@@ -26,7 +30,9 @@
         "vocab": "listen: dinlemek \nfight: dövüşmek / savaşmak  \nwe: biz",
         "grammarFilter": "don't have to, can",
         "levelFilter": "beginner",
-        "mediaFilter": "avatar"
+        "mediaFilter": "avatar",
+        "optionTrue": "Doğru",
+        "optionFalse": "Yanlış"
     },
     {
         "name": "house.mkv",
@@ -35,18 +41,9 @@
         "vocab": "Hide: Saklamak, saklanmak \nMask: Maske",
         "grammarFilter": "don't have to, want, mask",
         "levelFilter": "advanced",
-        "mediaFilter": "house"
-
-    },
-
-    {
-        "name": "example.mkv",
-        "sub": "You don't have to hide behind a mask",
-        "grammar-info": "'have to + (fiil)' cümleye zorunluluk anlamı katar. \n\nANCAK aynı kuralın olumsuzu 'yapmasan da olur/yapmak zorunda değilsin' anlamı katıyor \n\n behind (_____) devamında gelen kelimeye 'arkasında' anlamı katar",
-        "vocab": "Hide: Saklamak, saklanmak \nMask: Maske",
-        "grammar": ["don't have to", "want", "mask"],
-        "level": "advanced",
-        "media": "house"
+        "mediaFilter": "house",
+        "optionTrue": "Doğru",
+        "optionFalse": "Yanlış"
 
     }
 ]

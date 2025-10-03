@@ -2,10 +2,14 @@
 import { mainSubtitle, filterMenu } from './constants.js';
 
 export function toggleSub() {
-    if (mainSubtitle.style.display === "none") {
+
+    if (mainSubtitle.style.display === "") {
+        console.log(mainSubtitle.style.display)
         mainSubtitle.style.display = "block";
     } else {
-        mainSubtitle.style.display = "none";
+        console.log(mainSubtitle.style.display)
+        mainSubtitle.style.display = "";
+        console.log(mainSubtitle.style.display)
     }
 }
 
@@ -31,5 +35,14 @@ export function toggleFilter() {
         filterMenu.style.display = "block";
     } else {
         filterMenu.style.display = "none";
+    }
+}
+
+
+export function toggleDisplay(container) {
+    if (container.style.display === "none") {
+        container.style.display = "block";
+    } else {
+        container.style.display = "none";
     }
 }

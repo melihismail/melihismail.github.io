@@ -1,11 +1,12 @@
-import { filterBtn, subToggle, nextBtn, previousBtn, startBtn, myVideo, infoContainer, grammarContainer, mainSubtitle, topicBtn, filterMenu } from './constants.js';
+import { filterBtn, subToggle, nextBtn, previousBtn, startBtn, myVideo, infoContainer, grammarContainer, mainSubtitle, topicBtn, filterMenu, levelFilterMenu, levelBtn, correctBtn } from './constants.js';
 import { fetchVideoData } from './fetchData.js';
-import { highlightAll, toggleSub, toggleFilter } from './uiControl.js';
-import { startGame, nextVideo, previousVideo, showVideo, togglePause  } from './videoControls.js';
+import { highlightAll, toggleSub, toggleFilter, toggleDisplay } from './uiControl.js';
+import { startGame, nextVideo, previousVideo, showVideo, togglePause, correctAnswer  } from './videoControls.js';
 
 let videoData = []; //fetched videos, these don't change
 let videos = []; //these videos are changed through filtering
 let checkBoxArray = []; //values of the checkboxes that I use for filtering
+let levelCheckboxArray = [];
 
 
 let currentVideoIndex = 0;
@@ -21,15 +22,23 @@ async function getVideo(){ // gets and resets the videos.
         videos = fetchedVideos;
         videoData = fetchedVideos;
         console.log("çalış")
+        
     }
+    
 }
 getVideo();
 
 
 // Event listeners
-topicBtn.addEventListener("click", toggleFilter)
+topicBtn.addEventListener("click", () => toggleDisplay(filterMenu))
+levelBtn.addEventListener("click", () => toggleDisplay(levelFilterMenu))
+
 myVideo.addEventListener("click", togglePause);
 subToggle.addEventListener("click", toggleSub);
+
+
+
+
 filterBtn.addEventListener("click", filterAll)
 nextBtn.addEventListener("click", () => {
     currentVideoIndex = nextVideo(videos, currentVideoIndex);
@@ -39,30 +48,28 @@ previousBtn.addEventListener("click", () => {
 });
 startBtn.addEventListener("click", () => {
     startGame(videos, currentVideoIndex);
-});
+    console.log(correctBtn[0])
+    console.log(correctBtn)
+    console.log(correctBtn)
+    correctBtn.addEventListener("click", () => {console.log("hey")})
 
+});
 
 
 let videoCounterIndex = 0;
 
  function videoCounter() {
     if (videoCounterIndex == 0) {
-        console.log(videoCounterIndex)
-        console.log("1 kere")
         highlightAll(infoContainer);
         highlightAll(grammarContainer);
         videoCounterIndex++;
     } else if (videoCounterIndex == 1) {
-        console.log(videoCounterIndex)
-        console.log("2 kere")
         highlightAll(subToggle);
         subToggle.removeAttribute("disabled");
         videoCounterIndex++;
     } else if (videoCounterIndex == 2) {
         nextBtn.disabled = false;
         highlightAll(nextBtn)
-        console.log(videoCounterIndex)
-        console.log("3 kere")
         videoCounterIndex++;
     }
 }
@@ -84,22 +91,61 @@ myVideo.addEventListener("ended", videoCounter)
 
 
 function filterAll() {
+  
   videos = videoData;
-  newFilter();
-  videos = videoData.filter(video =>
-    checkBoxArray.every(value => video.grammarFilter.includes(value))
-  );
+   grammarCheckbox();
+   videos = filterSubject(videos);
+  //  levelCheckbox();
+  //  videos = filterLevel(videos);
+   
+  // videos = videoData.filter(video =>
+  //   checkBoxArray.every(value => video.grammarFilter.includes(value))
+  // );
   showVideo(videos, currentVideoIndex); // also shows the video when you click the button
 }
 
+function filterSubject(test) {
+  
+  test = videoData.filter(video =>
+    checkBoxArray.every(value => video.grammarFilter.includes(value))
+  );
+
+  return test;
+}
+
+function filterLevel(test) {
+  
+  test = videoData.filter(video =>
+    checkBoxArray.every(value => video.levelFilter.includes(value))
+  );
+
+  return test;
+}
+
+
 // puts everything in checkBoxArray
-function newFilter() {
+function grammarCheckbox() {
   checkBoxArray = [];
-  const checkBoxes = document.querySelectorAll(".grammar-checkbox");
+  const checkBoxes = chooseTag("grammar-checkbox")
   checkBoxes.forEach(checkbox => {
     if (checkbox.checked) {
       checkBoxArray.push(checkbox.value);
     }
   });
 }
+
+function levelCheckbox() {
+  levelCheckboxArray = [];
+  const checkBoxes = document.querySelectorAll(".level-checkbox");
+  checkBoxes.forEach(checkbox => {
+    if (checkbox.checked) {
+      levelCheckboxArray.push(checkbox.value);
+    }
+  });
+}
+
+function chooseTag(key){
+ return document.querySelectorAll("." + key);
+}
+
 

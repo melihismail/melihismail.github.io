@@ -4,9 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Melih ile İngilizce</title>
+  
     <link rel="stylesheet" href="/src/app/assets/styles/structure.css">
     <link rel="stylesheet" href="/src/app/assets/styles/header.css">
     <link rel="stylesheet" href="src/app/assets/styles/checkbox.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+ 
   
 
   
@@ -18,42 +21,77 @@
         <h1 class="header-logo">Melih Teacher</h1>
         <nav id="header">
           <button id="topic-button" class="nav-button topic-button">Konu</button>
-          <button class="nav-button">Seviye</button>
-          <button class="nav-button">Puan</button>
+          <button id="level-button" class="nav-button">Seviye</button>
+          <button class="nav-button">Film / Dizi</button>
         </nav>
       </div>
     </header>
     <main class="main-content">
-    <div id="filter-menu" class="dropdown-filter" style="display: none;">
+      <div id="filter-menu" class="dropdown-filter" style="display: none;">
+        <label class="cyberpunk-checkbox-label">
+          <input type="checkbox" class="cyberpunk-checkbox grammar-checkbox" name="Prepositions" value="preposition">
+          Prepositions
+      </label>
+      
       <label class="cyberpunk-checkbox-label">
-        <input type="checkbox" class="cyberpunk-checkbox grammar-checkbox" name="Prepositions" value="preposition">
-        Prepositions
-    </label>
+          <input type="checkbox" class="cyberpunk-checkbox grammar-checkbox" name="Can" value="can">
+          Can
+      </label>
+      
+      <label class="cyberpunk-checkbox-label">
+          <input type="checkbox" class="cyberpunk-checkbox grammar-checkbox" name="Want" value="want">
+          Want
+      </label>
+      
+      <label class="cyberpunk-checkbox-label">
+          <input type="checkbox" class="cyberpunk-checkbox grammar-checkbox" name="don't have to" value="don't have to">
+          Don't have to
+      </label>
     
-    <label class="cyberpunk-checkbox-label">
-        <input type="checkbox" class="cyberpunk-checkbox grammar-checkbox" name="Can" value="can">
-        Can
-    </label>
-    
-    <label class="cyberpunk-checkbox-label">
-        <input type="checkbox" class="cyberpunk-checkbox grammar-checkbox" name="Want" value="want">
-        Want
-    </label>
-    
-    <label class="cyberpunk-checkbox-label">
-        <input type="checkbox" class="cyberpunk-checkbox grammar-checkbox" name="don't have to" value="don't have to">
-        Don't have to
-    </label>
-    
-  
       <button id="filter-button" class="primary-button">Filter</button>
     </div>
+
+
+
+  <div id="level-filter-menu" class="dropdown-filter" style="display: none;">
+     
+   
+  
+  
+    <label class="cyberpunk-checkbox-label">
+      <input type="checkbox" class="cyberpunk-checkbox level-checkbox" name="Prepositions" value="beginner">
+      Beginner
+    </label>
+    
+    <label class="cyberpunk-checkbox-label">
+      <input type="checkbox" class="cyberpunk-checkbox level-checkbox" name="Can" value="intermediate">
+      Intermediate
+    </label>
+    
+    <label class="cyberpunk-checkbox-label">
+      <input type="checkbox" class="cyberpunk-checkbox level-checkbox" name="Want" value="advanced">
+      Advanced
+    </label>
+    
+    
+      <button id="filter-button" class="primary-button">Filter</button>
+    </div>
+    
+    
+  
+
+    
+
+
+
       <div class="start-cointainer" id="start-game-container">
-      
+       
         <button class="primary-button" id="start-game-btn"> Başla </button>
       </div>
       <div style="display: none;" id="the-game">
       <div class="content-container">
+
+        <!-- grammar section starts -->
         <section class="grammar-container text-padding" >
           <h3>
             Kullanılan kurallar:
@@ -61,18 +99,36 @@
           <div id="change-grammar">
           Burada bilmediğiniz grammarleri göreceksiniz!
         </div>
-        </section>
+        </section> 
+        <!-- grammar section ends -->
+
+        <!-- Video Section starts -->
+         <div>
         <section class="video-container">
-          <video width="1024" height="576" src="" id="video-shown" ></video>
+          <video width="1024" height="576" src="src/app/assets/videos/house.mkv" id="video-shown" ></video>
           <div class="inside-video">
             <h1 class="video-subtitle" id="main-subtitle">
               I am not in danger. I am the danger!
             </h1>
             <div class="flex-center">
-              
+              <button id="subtitle-toggle" class="bi bi-badge-cc"> </button>
             </div>
           </div>
+         
+          <button id="previousBtn" class="primary-button previous-button bi-caret-left"></button>
+          <button id="nextBtn" class="primary-button next-button bi bi-caret-right"></button>
+          
         </section>
+         <!-- Game selections section -->
+      <section id="controllers" class="controllers-design">
+        
+    
+       
+       </section>
+
+
+      </div>
+        <!-- İnfo Section -->
         <section class="info-container text-padding">
           <h3 class="double-info">
           Kullanılan kelimeler:
@@ -81,24 +137,10 @@
         Burada bilmediğiniz kelimeleri göreceksiniz!
       </div>
         </section>
-      </div>
-      <div id="controllers" class="controllers-design">
-        <button id="previousBtn" class="primary-button">Önceki</button>
-        <button class="subtitle-on-off fa-solid fa-closed-captioning" id="subtitle-toggle" disabled></button>
-        <button id="nextBtn" class="primary-button">Sonraki</button>
-      </div>
-      <div class="info-container">
-        <div>
-          Oyun hakkında bilgiler:
-          <br> Birinci dinleyiş: cointinerları glow-up yapıyor
-          <br> İkinci dinleyiş: Altyazıyı aktif ediyor
-          <br> Üçüncü dinleyiş: Next butonunu aktif ediyor 
-        </div>
-      </div>
+    
         
       </div>
     </main>
     <script type="module" src="/src/app/models/button.js"></script>
-   
-  </body>
+     </body>
 </html>

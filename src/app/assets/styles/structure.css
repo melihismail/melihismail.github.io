@@ -7,6 +7,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   background: linear-gradient(135deg, #4e6994, #1c3b5a);
+  overflow: hidden;
 }
 
 
@@ -25,6 +26,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  margin-top: 2rem;
 }
 
 .video-container {
@@ -34,9 +36,8 @@ body {
   align-items: center;
   background-color: #007BFF;
   padding-bottom: 0;
-  margin-bottom: 3rem;
-  margin-left: 5%;
-  margin-right: 5%;
+  
+ 
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
@@ -47,22 +48,60 @@ body {
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  
+height: 30rem;
   transition: all 700ms ease-in-out;
 }
 
 .primary-button {
   background-color: #FF4500; /* Darker coral color */
+  position: absolute;
   border: none;
   color: white;
   padding: 10px 20px;
-  margin: 0 5px;
   font-size: 32px;
   cursor: pointer;
   border-radius: 25px;
   transition: background-color 0.3s ease, transform 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+.next-button {
+ 
+ right: 0;
+ top: 45%;
+ border-radius: 20px 0px 0px 20px;
+ padding: 20px 10px;
+}
+
+.previous-button {
+  left: 0;
+  top: 45%;
+  border-radius: 0px 20px 20px 0px;
+  padding: 20px 10px;
+}
+
+.answer-button-left, .answer-button-right  {
+  background-color: white; /* Darker coral color */
+  width: 50%;
+  height: 150px;
+  border: none;
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.315);
+  overflow: hidden;
+  padding: 15px;
+  border: black;
+  border-width: 1px;
+  border-style:solid;
+  border-radius: 25px;
+}
+
+.answer-button-left {
+  margin-right: 10px;
+}
+
 
 .primary-button:not(:disabled):hover {
   background-color: #CC3700; /* Even darker coral on hover */
@@ -79,9 +118,9 @@ body {
 #controllers {
   display: flex;
   justify-content:space-between;
-  padding: 1rem;
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-top: 1rem;
+  max-width: 1024px;
+ 
 }
 
 .text-padding {
@@ -143,10 +182,6 @@ body {
     justify-content: space-between;
   }
 
-  .video-container {
-    flex: 1 1 60%;
-    margin: 0 2%;
-  }
 
   .grammar-container, .info-container {
     flex: 1 1 35%;
